@@ -1,0 +1,46 @@
+@import "variables";
+@import "mediaQueries";
+@import "section";
+
+@font-face {
+    font-family: "Gotham-Bold";
+    src: url("fonts/Gotham-Bold.TTF");
+}
+
+
+body {
+	margin:0;
+	font-family: Gotham-Bold, sans-serif;
+}
+
+input {
+	height: 37px;
+	border-radius: 22px;
+	border: 1px solid #c1c1c191;
+	padding: 2px;
+	&:focus {
+		border-radius: 22px;
+		border: 1px solid #c1c1c191;
+		box-shadow: 0 0 0 0;
+    outline: 0;
+	}
+}
+
+label {
+	margin: 7px;
+  font-weight: bold;
+}
+
+textarea {
+	width: 100%;
+	border-radius: 17px;
+	height: 90px;
+	border: 1px solid #c1c1c191;
+
+	&:focus {
+		border-radius:17px;
+		border: 1px solid #c1c1c191;
+		box-shadow: 0 0 0 0;
+    outline: 0;
+	}
+}
