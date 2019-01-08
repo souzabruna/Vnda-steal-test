@@ -11,6 +11,17 @@
   background: #38b24d;
 }
 
+.details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+  margin-top: 20px;
+  color: #c1c1c1;
+  cursor: pointer;
+  font-weight: lighter;
+}
+
 .subtitle-btn {
   color: #ffffff;
   font-size: 12px;
