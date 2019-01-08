@@ -117,21 +117,20 @@
 
 		&-align {
 			width: 90%;
-    	height: 90%;
 			margin:10px 0;
-    	display: flex;
+    		display: flex;
 			align-items: baseline;
-    	justify-content: space-between;
+    		justify-content: space-between;
 			flex-wrap: wrap;
 		}
 
     &-Content {
     	top:70px;
     	width: 700px;
-    	height: 550px;
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: center;
+    	height: 500px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
     	background-color:#ffffff;
     }
 

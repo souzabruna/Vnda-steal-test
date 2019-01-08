@@ -4,6 +4,10 @@ var dadosontem = [];
 var dadosmedia = [];
 var i=0;
 
+
+//$( "#calendario" ).datepicker();
+
+
 function dadosItem1(hora,hoje,ontem,media) {
     dadoshora.push(hora);
     dadoshoje.push(hoje);
@@ -167,4 +171,9 @@ $('#open-modal').click(function(){
 
 $('.modal-close').click(function(){
     $('.modal').toggle(".modal-open");
+});
+
+
+$(function(){
+    $("#calendario").datepicker({dateFormat: 'dd/mm/yyyy'});
 });
