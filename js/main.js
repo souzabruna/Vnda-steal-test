@@ -105,15 +105,17 @@ function dadosNotification(notfications, date, hour, inbound, outbound, differen
     $('#notification-outbound').text(outbound);
     $('#notification-date').text(date);
     $('#notification-hour').text(hour);
-
     var difference= difference;
+    $('#sub-not b').text(difference);
     var differenceNumber = difference.split('%');
     differenceNumber = parseFloat(differenceNumber[0]);
 
     if(differenceNumber > 0) {
       $("#sub-not").addClass("green-background");
+      $('#sub-not i').text("arrow_drop_up");
     }else if (differenceNumber < 0) {
       $("#sub-not").addClass("red-background");
+      $('#sub-not i').text("arrow_drop_down");
     } else if (differenceNumber == 0){
       $('#sub-not').addClass("yellow-background");
     }
