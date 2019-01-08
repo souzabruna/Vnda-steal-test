@@ -59,13 +59,16 @@ function dadosCampanha(status, date, hour, inbound, outbound, difference){
     $('#campanha-outbound').text(outbound);
     $('#campanha-date').text(date);
     $('#campanha-hour').text(hour);
-
+    $('#sub-campanha b').text(difference);
     if(differenceNumber > 0) {
       $("#sub-campanha").addClass("green-background");
+      $("#sub-campanha i").text("arrow_drop_up");
     }else if (differenceNumber < 0) {
       $("#sub-campanha").addClass("red-background");
+      $("#sub-campanha i").text("arrow_drop_down");
     } else if (differenceNumber == 0){
       $('#sub-campanha').addClass("yellow-background");
+      $("#sub-campanha i").text("remove");
     }
 
     var ct = document.getElementById("campanha").getContext('2d');
@@ -118,6 +121,7 @@ function dadosNotification(notfications, date, hour, inbound, outbound, differen
       $('#sub-not i').text("arrow_drop_down");
     } else if (differenceNumber == 0){
       $('#sub-not').addClass("yellow-background");
+      $('#sub-not i').text("remove");
     }
 
 
@@ -149,7 +153,7 @@ function dadosTransaction(transactions, date, hour, inbound, outbound, differenc
     var difference= difference;
     var differenceNumber = difference.split('%');
     differenceNumber = parseFloat(differenceNumber[0]);
-
+    $('#sub-transaction b').text(difference);
     $('#transaction-inbound').text(inbound);
     $('#transaction-outbound').text(outbound);
     $('#transaction-date').text(date);
@@ -157,10 +161,13 @@ function dadosTransaction(transactions, date, hour, inbound, outbound, differenc
 
     if(differenceNumber > 0) {
       $("#sub-transaction").addClass("green-background");
+      $('#sub-transaction i').text("arrow_drop_up");
     }else if (differenceNumber < 0) {
       $("#sub-transaction").addClass("red-background");
+      $('#sub-transaction i').text("arrow_drop_down");
     } else if (differenceNumber == 0){
       $('#sub-transaction').addClass("yellow-background");
+      $('#sub-transaction i').text("remove");
     }
 
 
