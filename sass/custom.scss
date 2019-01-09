@@ -7,6 +7,61 @@
     src: url("fonts/Gotham-Bold.TTF");
 }
 
+
+
+.title-chanel, .numberCampaing, .title-kind, .statusCampaing, .createdCampaing, .periodCampaing{
+  width: 14%;
+  font-size: 12px;
+}
+
+.texts-campain {
+    width: 12.5%;
+    font-size: 12px;
+    color:#c1c1c1;
+}
+
+.flex {
+  display: flex;
+}
+
+.block-content {
+  width: 100%;
+}
+
+.content-campains {
+  display: none;
+  margin: 30px 0;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+
+  &-item {
+    width: 12.5%;
+    font-size: 12px;
+    color: #ffffff;
+  }
+}
+
+.flex-display {
+  display: flex;
+}
+
+.kind-div {
+  background: #242424;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  cursor: pointer;
+  padding: 20px;
+  margin: 10px 0;
+  border-radius: 7px;
+
+  &:first-child {
+    display: none;
+  }
+}
+
 .green-background {
   background: #38b24d;
 }

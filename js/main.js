@@ -15,10 +15,10 @@ function dadosItem1(hora,hoje,ontem,media) {
     if (tela > 767) {
       var ctx = document.getElementById("primeiroGrafico").getContext('2d');
     } else {
-      
+
       var ctx = document.getElementById("primeiroGraficoMob").getContext('2d');
     }
-    
+
 
     var myChart = new Chart(ctx, {
       type: 'line',
@@ -174,8 +174,6 @@ function dadosTransaction(transactions, date, hour, inbound, outbound, differenc
       $('#sub-transaction').addClass("yellow-background");
       $('#sub-transaction i').text("remove");
     }
-
-
     var trans = document.getElementById("transactions").getContext('2d');
     var myChart = new Chart(trans, {
       type: 'doughnut',
