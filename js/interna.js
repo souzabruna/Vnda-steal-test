@@ -15,8 +15,13 @@ $(document).ready(function(){
            $('.kind-div:last-child').after('<div class="kind-div"><div class="title-kind">'+data.campaigns[i].kind+'</div></div>');
             var j=0;
 
-             // console.log(data.campaigns[i].channels);
-             $('.kind-div:last-child .title-kind:last-child').after('<div class="title-chanel">'+ data.campaigns[i].channels +'</div>');
+             if(data.campaigns[i].channels.toString()=="facebook"){
+               $('.kind-div:last-child .title-kind:last-child').after('<div class="title-chanel"><i class="fab fa-facebook-f face-color"></i><i class="fab fa-google-plus-g"></i></div>');
+             } else if(data.campaigns[i].channels.toString()=="facebook,google"){
+               $('.kind-div:last-child .title-kind:last-child').after('<div class="title-chanel"><i class="fab fa-facebook-f face-color"></i><i class="fab fa-google-plus-g google-color"></i></div>');
+             } else if(data.campaigns[i].channels.toString()=="google"){
+               $('.kind-div:last-child .title-kind:last-child').after('<div class="title-chanel"><i class="fab fa-facebook-f"></i><i class="fab fa-google-plus-g google-color"></i></div>');
+             }
 
              $.each(data.campaigns[i].campaign,function(){
                j++;
