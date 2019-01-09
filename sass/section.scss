@@ -52,6 +52,11 @@
 	height: 40px;
 	background-color: $secondary-color;
 	border-radius: 22px;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+	
 	@include mobile{
     	width: 95%;
     }

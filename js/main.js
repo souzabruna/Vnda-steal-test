@@ -198,7 +198,8 @@ $(document).ready(function(){
         dataType: "json",
         url: "http://pmweb.agencia.pmweb.com.br/teste-frontend/api/intranet/healthstatus.json"
     }).done(function(data){
-        console.log(data);
+        
+        $('.dataH').text(data.date);
         $.each(data.chartdata,function(){
            dadosItem1(data.chartdata[i].hora, data.chartdata[i].hoje, data.chartdata[i].ontem, data.chartdata[i].media);
             i++;
@@ -249,3 +250,4 @@ $('.details').click(function() {
   var url = $(this).find('.div-hidden span').text();
   window.location.assign('interna.html?url='+url);
 });
+
