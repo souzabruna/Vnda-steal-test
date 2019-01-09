@@ -22,12 +22,17 @@
 
 				<!--calendario-->
 				<div class="DateBox">
-					<input type="text" id="calendario"/>
+					
 				</div>
 			</div>
 
 			<div class="LargeBox">
-			 	<canvas id="primeiroGrafico" height="25" width="100%"></canvas>
+				<div class="canvas-desk">
+			 		<canvas id="primeiroGrafico" height="25" width="100%"></canvas>
+			 	</div>
+			 	<div class="canvas-mob">
+			 		<canvas id="primeiroGraficoMob" height="80" width="100%"></canvas>
+			 	</div>
 			</div>
 
 			<div class="SmallBox">
@@ -53,6 +58,9 @@
           </div>
         </div>
         <div class="details">
+          <div class="div-hidden">
+          	<span>http://pmweb.agencia.pmweb.com.br/teste-frontend/api/intranet/campaigns.json</span>
+          </div>
           <div>Ver detalhes</div>
           <i class="material-icons">
             arrow_right
@@ -84,6 +92,9 @@
           </div>
         </div>
         <div class="details">
+          <div class="div-hidden">
+          	<span>http://pmweb.agencia.pmweb.com.br/teste-frontend/api/intranet/notification.json</span>
+          </div>
           <div>Ver detalhes</div>
           <i class="material-icons">
             arrow_right
@@ -92,7 +103,7 @@
 			</div>
 
 
-			<div class="SmallBox">
+	 <div class="SmallBox">
         <div class="SmallBox-Title">
           <h3>Transactions</h3>
           <span>Last Updade</span>
@@ -116,6 +127,9 @@
 
        </div>
        <div class="details">
+      	 <div class="div-hidden">
+          	<span>http://pmweb.agencia.pmweb.com.br/teste-frontend/api/intranet/transaction.json</span>
+         </div>
          <div>Ver detalhes</div>
          <i class="material-icons">
            arrow_right

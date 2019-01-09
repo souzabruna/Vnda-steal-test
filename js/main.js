@@ -3,9 +3,7 @@ var dadoshoje = [];
 var dadosontem = [];
 var dadosmedia = [];
 var i=0;
-
-
-//$( "#calendario" ).datepicker();
+var tela = window.innerWidth;
 
 
 function dadosItem1(hora,hoje,ontem,media) {
@@ -13,7 +11,14 @@ function dadosItem1(hora,hoje,ontem,media) {
     dadoshoje.push(hoje);
     dadosontem.push(ontem);
     dadosmedia.push(media);
-    var ctx = document.getElementById("primeiroGrafico").getContext('2d');
+
+    if (tela > 767) {
+      var ctx = document.getElementById("primeiroGrafico").getContext('2d');
+    } else {
+      
+      var ctx = document.getElementById("primeiroGraficoMob").getContext('2d');
+    }
+    
 
     var myChart = new Chart(ctx, {
       type: 'line',
@@ -195,6 +200,7 @@ $(document).ready(function(){
         dataType: "json",
         url: "http://pmweb.agencia.pmweb.com.br/teste-frontend/api/intranet/healthstatus.json"
     }).done(function(data){
+        console.log(data);
         $.each(data.chartdata,function(){
            dadosItem1(data.chartdata[i].hora, data.chartdata[i].hoje, data.chartdata[i].ontem, data.chartdata[i].media);
             i++;
@@ -209,6 +215,7 @@ $(document).ready(function(){
         url: "http://pmweb.agencia.pmweb.com.br/teste-frontend/api/intranet/campaigns.json"
     }).done(function(data){
         dadosCampanha(data.healthstatus, data.date, data.time, data.inbound, data.outbound, data.difference);
+        console.log(data);
     });
 });
 
@@ -238,4 +245,9 @@ $('#open-modal').click(function(){
 
 $('.modal-close').click(function(){
     $('.modal').toggle(".modal-open");
+});
+
+$('.details').click(function() {
+  var url = $(this).find('.div-hidden span').text();
+  window.location.assign('interna.html?url='+url);
 });

@@ -11,6 +11,26 @@
   background: #38b24d;
 }
 
+.kind-div {
+	color:#ffffff;
+}
+
+.div-hidden {
+	display:none;
+}
+
+.canvas-desk {
+	@include mobile{
+		display:none;
+	}
+}
+
+.canvas-mob {
+	@include desktop {
+		display:none;
+	}
+}
+
 .details {
   display: flex;
   align-items: center;

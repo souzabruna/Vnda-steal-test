@@ -27,6 +27,7 @@
 	justify-content: space-between;
 	@include mobile{
     	width: 100%;
+    	justify-content: center;
     }
 }
 
@@ -38,6 +39,12 @@
 	justify-content: space-between;
 	flex-wrap: wrap;
 	margin-top: 20px;
+
+	@include mobile{
+    	width: 100%;
+    	justify-content: center;
+    	margin-bottom: 10px;
+    }
 }
 
 .DateBox {
@@ -45,6 +52,9 @@
 	height: 40px;
 	background-color: $secondary-color;
 	border-radius: 22px;
+	@include mobile{
+    	width: 95%;
+    }
 }
 
 .descriptions {
@@ -62,7 +72,7 @@
 }
 
 .donut {
-	width: 55%;
+  width: 55%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -73,6 +83,9 @@
 	height: 300px;
 	border-radius: 7px;
 	background-color: $secondary-color;
+	@include mobile{
+    	width: 98%;
+    }
 }
 
 .SmallBox {
@@ -87,6 +100,11 @@
 		padding: 7px;
 		margin: 10px 0 0 10px;
 	}
+
+	@include mobile{
+    	width: 98%;
+    	margin: 10px 0 10px 0;
+    }
 }
 
 .TitleBox {
@@ -112,6 +130,10 @@
 	border-radius: 22px;
 	cursor: pointer;
 	border: 1px solid #ffffff;
+
+	@include mobile {
+		width: 98%;
+	}
 }
 
 .btn-x-large {
@@ -159,7 +181,12 @@
 		flex-wrap: wrap;
 		justify-content: center;
     	background-color:#ffffff;
-    }
+
+		@include mobile {
+	    	width: 95%;
+	    	overflow: scroll;
+	    }
+	 }
 
     &-top {
     	width: 100%;
@@ -189,9 +216,12 @@
     	height: 70px;
     	display: flex;
     	flex-direction: column;
-		  width: 45%;
-    }
+		width: 45%;
 
+		@include mobile {
+			width: 100%;
+	    }
+	}
 		&-filds-Large {
 			height: auto;
 			display: flex;
