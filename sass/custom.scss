@@ -18,14 +18,40 @@
     width: 12.5%;
     font-size: 12px;
     color:#c1c1c1;
+    font-weight: bold;
+
+    &-clic {
+      width: 8%;
+    }
 }
+
 
 .flex {
   display: flex;
 }
 
+.content-titles {
+  display: flex;
+  justify-content: space-evenly;
+}
+
 .block-content {
   width: 100%;
+  min-height: 80vh;
+}
+
+.face-color {
+  color: #0d47a1;
+}
+
+.close-page {
+  color: #ffffff;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.google-color {
+  color:#dc4b38;
 }
 
 .content-campains {
@@ -34,11 +60,16 @@
   align-items: center;
   flex-wrap: wrap;
   width: 100%;
+  justify-content: space-between;
 
   &-item {
-    width: 12.5%;
+    width: 13.5%;
     font-size: 12px;
     color: #ffffff;
+
+    &-clic {
+      width: 8%;
+    }
   }
 }
 
@@ -48,27 +79,22 @@
 
 .kind-div {
   background: #242424;
-  width: 100%;
+  width: 96%;
   height: auto;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   cursor: pointer;
-  padding: 20px;
+  padding: 2%;
   margin: 10px 0;
   border-radius: 7px;
-
-  &:first-child {
-    display: none;
-  }
+  color: #dedbdb;
 }
 
 .green-background {
   background: #38b24d;
 }
 
-.kind-div {
-	color:#ffffff;
-}
 
 .div-hidden {
 	display:none;
