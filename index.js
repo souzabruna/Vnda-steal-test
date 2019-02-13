@@ -1,7 +1,7 @@
 var express = require('express')
 var app = express()
 app.get('/', function (req, res) {
-   res.sendfile('index.html');
+   res.sendfile('src/views/index.html');
 })
 
 app.use(express.static('src'))
