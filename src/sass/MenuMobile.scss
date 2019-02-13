@@ -4,6 +4,8 @@
 
 	.mm-panels {
 		background: #ffffff;
+		top: 15px;
+
 
 		.mm-panel {
 			background: #ffffff;
@@ -16,6 +18,20 @@
 			    min-height: 50px;
 			    display: flex;
 			    align-items: center;
+
+			    input {
+			    	border: none;
+    				padding: 0 20px;
+				    font-size: 14px;
+				    font-family: oswald;
+				    font-weight: 100;
+
+				    &:focus {
+				    	box-shadow: 0 0 0 0;
+					    border: 0 none;
+					    outline: 0;
+				    }
+			    }
 
 			    ul {
 			    	li {
