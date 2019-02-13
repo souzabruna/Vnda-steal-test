@@ -18,6 +18,18 @@
 			img {
 				max-width: 100%;
 			}
+
+			.banner-desktop {
+				@include mobile {
+					display:none
+				}
+			}
+
+			.banner-mobile {
+				@include desktop {
+					display:none;
+				}
+			}
 		}
 	}
 }

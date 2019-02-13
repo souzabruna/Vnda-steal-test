@@ -7,6 +7,10 @@
 	justify-content: center;
 	flex-direction: column;
 
+	@include mobile {
+		width:90%;
+	}
+
 	h2 {
 		font-size: 25px;
 		font-weight: 400;
@@ -21,7 +25,7 @@
 
     	@include mobile {
     		text-align:center;
-    		font-size:14px;
+    		font-size:16px;
     	}
 	}
 
