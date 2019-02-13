@@ -1,11 +1,29 @@
 .Menu {
-	background: #fff!important;
+	
 	top: 15px;
 
-	ul {
-		li {
-			input {
-				border:none;
+	.mm-panels {
+		background: #ffffff;
+
+		.mm-panel {
+			background: #ffffff;
+
+			li {
+				color:#000000;
+				text-transform: uppercase;
+			    font-size: 16px;
+			    font-weight: 400;
+			    min-height: 50px;
+			    display: flex;
+			    align-items: center;
+
+			    ul {
+			    	li {
+			    	    color: #584f4f;
+					    text-transform: capitalize;
+					    font-size: 15px;
+			    	}
+			    }
 			}
 		}
 	}	
