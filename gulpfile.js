@@ -1,20 +1,20 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
-var watch = require('gulp-watch');
+var server = require( 'gulp-develop-server' );
 
-	//task para o sass
-	gulp.task('sass', function () {
-   	 return gulp.src('sass/*.scss')
+//task para o sass
+gulp.task('sass', function () {
+   	return gulp.src('src/sass/*.scss')
         .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-        .pipe(gulp.dest('css'));
-	});
+        .pipe(gulp.dest('src/dist/css'));
+});
 
-	//task para o watch
-	gulp.task('watch', function () {
-	   	return	gulp.watch('sass/*.scss', ['sass']);
+gulp.task( 'server:start', function() {
+    server.listen( { path: 'index.js' } );
+    gulp.watch( [ 'index.js' ], server.restart );
+});
 
-	});
+gulp.task('default', function(){
 
-	gulp.task('default', function(){
+});
 
-	});

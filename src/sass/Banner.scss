@@ -1,0 +1,23 @@
+@import "media-queries"; 
+
+.Banner {
+	width:100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	.Slider {
+		width: 90%;
+
+		@include mobile {
+			width:100%;
+		}
+
+		.item {
+
+			img {
+				max-width: 100%;
+			}
+		}
+	}
+}

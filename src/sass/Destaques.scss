@@ -1,0 +1,59 @@
+@import "media-queries";
+
+.Destaques {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	h2 {
+		font-size: 25px;
+		font-weight: 400;
+		margin: 70px 0 0 0;
+	}
+
+	p {
+		font-family: "Open Sans",sans-serif;
+		font-size: 13px;
+    	font-weight: 100;
+    	margin-top: 7px;
+	}
+
+	.banners {
+		width: 90%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		@include mobile {
+			flex-wrap:wrap;
+			justify-content:center;
+		}
+
+		.item {
+			width: 33%;
+			overflow: hidden;
+			cursor: pointer;
+
+			@include mobile {
+				width: 100%;
+			}
+
+
+			img {
+				width: 100%;
+				transition: all 0.3s;
+			}
+
+			&:hover {
+				img {
+					transform: scale(1.1);
+				}
+				border:1px solid #fb377f;
+			}
+
+		}
+	}
+
+}
