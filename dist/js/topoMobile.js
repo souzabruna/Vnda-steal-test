@@ -1,0 +1,1 @@
+$(document).ready(function(){$("nav#menu").mmenu({slidingSubmenus:!1});var n=$("nav#menu").data("mmenu");$("#btn-menu").click(function(){n.close()})});

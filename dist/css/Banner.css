@@ -1,0 +1,1 @@
+.Banner{width:100%;display:flex;align-items:center;justify-content:center}.Banner .Slider{width:90%}@media (max-width: 991px){.Banner .Slider{width:100%}}.Banner .Slider .item img{max-width:100%}@media (max-width: 991px){.Banner .Slider .item .banner-desktop{display:none}}@media (min-width: 992px){.Banner .Slider .item .banner-mobile{display:none}}
