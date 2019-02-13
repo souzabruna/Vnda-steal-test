@@ -10,5 +10,7 @@ $(document).ready(function(){
 });
 
 $(function() {
-	$('nav#menu').mmenu();
+	$('nav#menu').mmenu({
+		"slidingSubmenus": false
+	});
 });
